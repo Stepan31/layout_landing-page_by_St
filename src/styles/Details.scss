@@ -1,0 +1,113 @@
+.Details {
+  &__wrapper {
+    display: grid;
+    row-gap: 40px;
+
+    @include ontablet {
+      row-gap: 64px;
+    }
+  }
+}
+
+.Detail {
+  &__photos {
+    @include pagegrid;
+  }
+
+  &__photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__link {
+    overflow: hidden;
+
+    &--wide {
+      @include ontablet {
+        grid-column: span 4;
+      }
+
+      @include ondesktop {
+        grid-column: span 8;
+      }
+    }
+
+    &--square {
+      @include ontablet {
+        grid-column: span 2;
+      }
+
+      @include ondesktop {
+        grid-column: span 4;
+      }
+    }
+  }
+
+  &__title {
+    margin-top: 16px;
+    margin-bottom: 8px;
+    grid-column: 1 / -1;
+    font-size: 24px;
+    line-height: 33.6px;
+  }
+
+  &__text {
+    margin: 0;
+    grid-column: 1 / -1;
+    font-size: 16px;
+    line-height: 24.4px;
+  }
+}
+
+.Details__button {
+  margin-top: 40;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  @include ontablet {
+    margin-top: 48;
+  }
+
+  @include ondesktop {
+    margin-top: 48;
+  }
+}
+
+.button__Explore {
+  font-family: Poppins, sans-serif;
+  background: #fff;
+  border-radius: 40px;
+  border-color: #fff;
+  padding: 0 48px;
+  height: 56px;
+  color: #1d1d1d;
+  font-size: 16px;
+  line-height: 27px;
+  font-weight: 700;
+  border-style: none;
+
+  &:hover {
+    box-shadow: 1px 4px 16px rgba(232, 232, 240, 0.4);
+    cursor: pointer;
+  }
+
+  &:active {
+    box-shadow: 1px 4px 16px rgba(232, 232, 240, 0.64);
+  }
+
+  @include ontablet {
+    width: 392px;
+  }
+
+  @include ondesktop {
+    width: 324px;
+  }
+}

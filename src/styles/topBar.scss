@@ -1,0 +1,48 @@
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+
+  @include ontablet {
+    padding: 36px 72px;
+  }
+
+  @include ondesktop {
+    padding: 36px 120px;
+  }
+
+  &__logo {
+    width: 130px;
+    height: 38px;
+
+    @include hover(transform, scale(1.2));
+
+    @include ontablet {
+      width: 187px;
+      height: 56px;
+    }
+
+    @include ondesktop {
+      width: 187px;
+      height: 56px;
+    }
+  }
+
+  &__logo-link {
+    display: flex;
+  }
+
+  &__icons {
+    display: flex;
+    gap: 24px;
+
+    // @include ontablet {
+    //   gap: 32px;
+    // }
+
+    @include ondesktop {
+      gap: 32px;
+    }
+  }
+}

@@ -1,0 +1,53 @@
+.icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+
+  @include ontablet {
+    background-size: cover;
+    background-position: cover;
+    width: 32px;
+    height: 32px;
+  }
+
+  @include ondesktop {
+    background-size: cover;
+    background-position: cover;
+    width: 32px;
+    height: 32px;
+  }
+
+  &--phone {
+    background-image: url(/src/styles/images/icons/Phone.png);
+    &:hover {
+      background-image: url(/src/styles/images/icons/phonehover.png);
+      transition: 0.3s ease-in-out;
+      gap: 20px;
+      font-size: 16px;
+      background-size: cover;
+      background-position: cover;
+      width: 190px;
+    }
+  }
+
+  &--menu {
+    background-image: url(/src/styles/images/icons/Burger-menu.png);
+  }
+
+  &--close {
+    background-image: url(/src/styles/images/icons/close.png);
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+    background-position: cover;
+
+    @include ondesktop {
+      width: 32px;
+      height: 32px;
+    }
+  }
+}
+
+.icon--menu:hover {
+  background-image: url(/src/styles/images/icons/menuhover.png);
+}

@@ -1,0 +1,58 @@
+@import 'mixin';
+
+.page {
+  font-family: Poppins, sans-serif;
+  color: #fff;
+  scroll-behavior: smooth;
+}
+
+.page__body {
+  margin: 0;
+  background-color: $maintTextColor;
+}
+
+.header {
+  background-image: url('../styles/images/Cover_photo.png');
+  height: 100vh;
+  background-size: cover;
+  background-position: right;
+
+  &__content {
+    box-sizing: border-box;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__bottom {
+    padding: 0 20px 88px;
+
+    @include ontablet {
+      padding-bottom: 64px;
+    }
+  }
+
+  &--title {
+    margin: 0;
+    text-align: center;
+    font-weight: 700px;
+    font-size: 36px;
+    line-height: 36px;
+    color: #fff;
+    letter-spacing: -1.5px;
+    padding-bottom: 55px;
+
+    @include ontablet {
+      font-size: 64px;
+      line-height: 64px;
+      padding-bottom: 90px;
+    }
+
+    @include ondesktop {
+      font-size: 80px;
+      line-height: 80px;
+      padding-bottom: 130px;
+    }
+  }
+}
